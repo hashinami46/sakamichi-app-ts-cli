@@ -10,7 +10,7 @@
 ## 🌸 Support Me
 <div align="center">
   <a href="https://www.buymeacoffee.com/hashinami"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="BuyMeACoffe"></a>
-  <a href="https://saweria.co/hashinami" style="position:relative;margin:5px;font-size:10px;font-weight:bold;text-decoration:none;padding:2px;display:flex;align-items:center;height:20px;width:110px;justify-content:center;letter-spacing:5px;background-color:pink"><img height="70%" style="margin-right:5px" src="https://saweria.co/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcapy_happy.603c7293.svg&w=640&q=75" alt="Saweria"><p style="color:#E75480;font-family:Arial,sans-serif;">SAWERIA</p></a>
+  <a href="https://saweria.co/hashinami" style="position:relative;margin:5px;font-size:10px;font-weight:bold;text-decoration:none;padding:2px;display:flex;align-items:center;height:20px;width:110px;justify-content:center;letter-spacing:5px;background-color:pink"><img height="13px" style="margin-right:5px" src="https://saweria.co/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcapy_happy.603c7293.svg&w=640&q=75" alt="Saweria"><p style="color:#E75480;font-family:Arial,sans-serif;">SAWERIA</p></a>
 </div>
 
 ## 🚀 Description

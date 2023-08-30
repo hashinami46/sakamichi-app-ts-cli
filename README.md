@@ -1,17 +1,17 @@
 # Sakamichi App TS
 
-<center>
+<div align="center">
   <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
   <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript">
   <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
   <img src="https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Shell Script">
-</center>
+</div>
 
 ## 🌸 Support Me
-<center>
+<div align="center">
   <a href="https://www.buymeacoffee.com/hashinami"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="BuyMeACoffe"></a>
   <a href="https://saweria.co/hashinami" style="position:relative;margin:5px;font-size:10px;font-weight:bold;text-decoration:none;padding:2px;display:flex;align-items:center;height:20px;width:110px;justify-content:center;letter-spacing:5px;background-color:pink"><img height="70%" style="margin-right:5px" src="https://saweria.co/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcapy_happy.603c7293.svg&w=640&q=75" alt="Saweria"><p style="color:#E75480;font-family:Arial,sans-serif;">SAWERIA</p></a>
-</center>
+</div>
 
 ## 🚀 Description
 Typescript based cli tools to download Sakamichi Series App assets such as audio, video, and text.

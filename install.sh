@@ -9,4 +9,4 @@ python3 -m ensurepip --upgrade
 pip install -r requirements.txt
 git clone https://github.com/Youjose/PyCriCodecs.git
 cp -f .config/PyCriCodecs.setup.py PyCriCodecs/setup.py
-cd PyCriCodecs && pip install . && cd ../ && rm -rf PyCriCodecs
+cd PyCriCodecs && pip install . -v && cd ../ && rm -rf PyCriCodecs

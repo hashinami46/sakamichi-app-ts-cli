@@ -102,6 +102,7 @@ Arguments
 -A Appname
 -T Asset Type
 -mid Member id. Check this using command node cli.js --cheatsheet n46
+-sid Series id. I use this argument to define the event id
 -f & -t 3 digit assets range index 
 
 node cli.js -A itsunogi -T sprites -mid 37 -sid 10 -f 001 -t 017
@@ -136,7 +137,7 @@ node cli.js -A nogikoi -S 1 -T sprites -mid 46 -f 07 -t 08
 ```
 Arguments
 -A appname
--S Server ( 1 or 2 ) try server 2 if server 1 maintenance
+-S Server (1 or 2) 1 is nogikoi mobile server and 2 is nogikoi gree server
 -T Asset Type. P for pink, B for blue, G for green.
 -s Card Star. Should between 1-8
 -f & -t 4-5 digit assets range index 
@@ -166,6 +167,7 @@ Arguments
 -T Asset Type. Should be timeline or past_messages
 -M Membername. You can provide single membername or more 
 -D yyyy-mm-dd formatted date. You can provide single date or two (from date and to date)
+--text Include text assets downloading. If you just want to extract photo, audio, and video, ignore this arguments
 
 node cli.js -A nogitalk -T timeline -M 柴田柚菜 -D 2022-06-28 
 node cli.js -A nogitalk -T timeline -M 柴田柚菜 -D 2022-06-28 2022-06-30
@@ -181,9 +183,10 @@ Arguments
 -T Asset Type. Should be timeline or past_messages
 -M Membername. Should be 齋藤飛鳥
 -D yyyy-mm-dd formatted date. You can provide single date or two (from date and to date)
+--text Include text assets downloading. If you just want to extract photo, audio, and video, ignore this arguments
 
 node cli.js -A asukatalk -T timeline -M 齋藤飛鳥 -D 2022-06-28 
-node cli.js -A asukatalk -T timeline -M 齋藤飛鳥 -D 2022-06-28 2022-06-30
+node cli.js -A asukatalk -T timeline -M 齋藤飛鳥 -D 2022-06-28 2022-06-30 --text
 ```
 
 ## 🌲 Directory Structure

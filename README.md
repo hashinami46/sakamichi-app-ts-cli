@@ -17,8 +17,10 @@ Typescript based cli tools to download Sakamichi Series App assets such as audio
 Each assets need different requirements. You will facing error if you haven't install or provide the requirements needed. 
 
 ## ⚠️ Warning!
-This app is only supported linux for now! I don't have any idea why it won't work on windows. \
+~~This app is only supported linux for now! I don't have any idea why it won't work on windows.~~ \
+I found the bug that caused errors on windows. So, I created a separated python script to extract the assets. \
 If you encounter any errors, maybe you haven't installed the requirements. \
+**But I warn you, if you use WSL (Windows Subsystem for Linux), you'll facing some errors that I still don't know how to fix that.** \
 Please make sure that you already successfully installed the requirements before using this app! \
 This is the app bundle version. I don't wanna put the source code here. It still lacks of bugs and if you wanna help me to fix the bugs, just contact me [here](hashinami46@gmail.com).
 
@@ -34,6 +36,7 @@ This is the app bundle version. I don't wanna put the source code here. It still
 - PyCriCodecs
 
 ## 🛠️ Installation and Setup
+The installation tutorial below is only for linux user. So, if you using windows, just search for the libs installation tutorial. 
 ### 🐇 Quick Installation 
 You can easily run `bash install.sh` for quick setup. Try install the libs manually if you facing an error.\
 For downloading mobame assets, you need to setup your credentials in `.config/secrets.credentials.json`. Just fill the `refresh_token` and this app will autogenerate the `access_token`.
@@ -197,6 +200,8 @@ node cli.js -A asukatalk -T timeline -M 齋藤飛鳥 -D 2022-06-28 2022-06-30 --
 │   └── sakukoi_catalog_223071902
 ├── .config
 │   └── .secrets.credentials.json
+├── .deps
+│   └── Downloader.py
 ├── .env
 └── cli.js
 ```
@@ -221,7 +226,9 @@ CREDS_PATH=".config/.secrets.credentials.json"
 
 ## ⭐ Credits
 - [UnityPy](https://pypi.org/project/UnityPy/)
-- [PyCriCodecs](https://github.com/Youjose/PyCriCodecs)
+- [PyCriCodecs](https://github.com/Youjose/PyCriCodecs) 
+- [Colmsg](https://github.com/proshunsuke/colmsg)
+- And all my friends that helps me to maintain and find the issues.
 
 ## ©️ License
 This application is provided as open source and is offered as-is. The author is not responsible for any damages caused by this application. By using this application, users agree to assume any risks associated with its use.\

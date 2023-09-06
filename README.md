@@ -26,11 +26,12 @@ This is the app bundle version. I don't wanna put the source code here. It still
 
 ## 📝 Requirements
 ### **Runtime**
-- Nodejs >= 18 
-- Python3 >= 3.9
+- Nodejs >= 18 (Suggested: 20.5.1)
+- Python3 >= 3.10 (Suggested: 3.10.12)
 ### **External Dependencies**
 - wget
 - ffmpeg
+- git
 ### **Libs**
 - All python3 libs in requirements.txt
 - PyCriCodecs
@@ -41,7 +42,7 @@ The installation tutorial below is only for linux user. So, if you using windows
 You can easily run `bash install.sh` for quick setup. Try install the libs manually if you facing an error.\
 For downloading mobame assets, you need to setup your credentials in `.config/secrets.credentials.json`. Just fill the `refresh_token` and this app will autogenerate the `access_token`.
 ### 🐢 Manual Installation
-1. Install Node, Python3, and external dependencies such as wget and ffmpeg
+1. Install Node, Python3, and external dependencies such as wget, ffmpeg, and git
 ```
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y nodejs npm python3 git ffmpeg wget
@@ -57,7 +58,7 @@ cp -f .config/PyCriCodecs.setup.py PyCriCodecs/setup.py
 cd PyCriCodecs && pip install . -v && cd ../ && rm -rf PyCriCodecs
 ```
 
-Please read till the end for common usage and knowledge.
+Please read till the end for common usage and knowledge. I also put some useful links on credits.
 
 ## 🔫 Supported Apps and Usage
 ### 🎮 Nogifes
@@ -211,6 +212,21 @@ node cli.js -A asukatalk -T timeline -M 齋藤飛鳥 -D 2022-06-28 2022-06-30 --
 - [ ] Create audio types assets downloader.
 - [ ] Create Nogifra assets decrypter.
 
+## 🪵 Changelog
+- 2023-09-06_1.0.0
+```
+• Now working on Windows
+• Separate python extraction script
+• Remove ffpb
+• Generate new requirements.txt
+```
+
+## 🐞 Known Bugs
+- Failed install Pillow
+> Unfortunately Pillow 9.0.1 doesn't supported in python 3.11 for now. You should downgrade your python to 3.10.
+- Node syntax missmatch
+> Make sure that you already installed Node v18 or above.
+
 ## 📑 Note
 * How to get `refresh_token`? 
 > Nah. I won't tell you. Please search by yourself 🙏
@@ -223,11 +239,18 @@ CREDS_PATH=".config/.secrets.credentials.json"
 ```
 * How to download movie in nogikoi?
 > Nah. Idk since the movies is securely encrypted.
+* Can't downloads hinakoi and sakukoi even if catalog already provided.
+> It's a bit tricky. Try to extract the catalog using zip extractor like winrar or ZArchiver, then rename the extracted catalog to something like the directory tree above. If you lucky, you won't get any errors.
 
 ## ⭐ Credits
 - [UnityPy](https://pypi.org/project/UnityPy/)
 - [PyCriCodecs](https://github.com/Youjose/PyCriCodecs) 
 - [Colmsg](https://github.com/proshunsuke/colmsg)
+- [Nodejs](https://nodejs.org/en/download)
+- [Python](https://www.python.org/downloads/)
+- [ffmpeg](https://ffmpeg.org/download.html)
+- [wget](https://www.gnu.org/software/wget/)
+- [git](https://git-scm.com/downloads)
 - And all my friends that helps me to maintain and find the issues.
 
 ## ©️ License

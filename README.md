@@ -198,7 +198,7 @@ node cli.js -A asukatalk -T timeline -M 齋藤飛鳥 -D 2022-06-28 2022-06-30 --
 .
 ├── .catalog
 │   ├── hinakoi_catalog_223072101
-│   └── sakukoi_catalog_223071902
+│   └── sakukoi_catalog_223090101
 ├── .config
 │   └── .secrets.credentials.json
 ├── .deps
@@ -213,6 +213,10 @@ node cli.js -A asukatalk -T timeline -M 齋藤飛鳥 -D 2022-06-28 2022-06-30 --
 - [ ] Create Nogifra assets decrypter.
 
 ## 🪵 Changelog
+- 2023-09-07_1.0.1
+```
+• Minor bug fix
+```
 - 2023-09-06_1.0.0
 ```
 • Now working on Windows
@@ -243,14 +247,14 @@ CREDS_PATH=".config/.secrets.credentials.json"
 > It's a bit tricky. Try to extract the catalog using zip extractor like winrar or ZArchiver, then rename the extracted catalog to something like the directory tree above. If you lucky, you won't get any errors.
 
 ## ⭐ Credits
-- [UnityPy](https://pypi.org/project/UnityPy/)
-- [PyCriCodecs](https://github.com/Youjose/PyCriCodecs) 
-- [Colmsg](https://github.com/proshunsuke/colmsg)
+- [git](https://git-scm.com/downloads)
+- [wget](https://www.gnu.org/software/wget/)
+- [ffmpeg](https://ffmpeg.org/download.html)
 - [Nodejs](https://nodejs.org/en/download)
 - [Python](https://www.python.org/downloads/)
-- [ffmpeg](https://ffmpeg.org/download.html)
-- [wget](https://www.gnu.org/software/wget/)
-- [git](https://git-scm.com/downloads)
+- [Colmsg](https://github.com/proshunsuke/colmsg)
+- [UnityPy](https://pypi.org/project/UnityPy/)
+- [PyCriCodecs](https://github.com/Youjose/PyCriCodecs) 
 - And all my friends that helps me to maintain and find the issues.
 
 ## ©️ License

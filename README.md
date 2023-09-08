@@ -13,7 +13,7 @@
 </div>
 
 ## 🚀 Description
-Typescript based cli tools to download Sakamichi Series App assets such as audio, video, and text.
+Typescript based cli tools to download Sakamichi Series App assets such as photo, video, audio, and text.
 Each assets need different requirements. You will facing error if you haven't install or provide the requirements needed. 
 
 ## ⚠️ Warning!
@@ -22,7 +22,7 @@ I found the bug that caused errors on windows. So, I created a separated python 
 If you encounter any errors, maybe you haven't installed the requirements. \
 **But I warn you, if you use WSL (Windows Subsystem for Linux), you'll facing some errors that I still don't know how to fix that.** \
 Please make sure that you already successfully installed the requirements before using this app! \
-This is the app bundle version. I don't wanna put the source code here. It still lacks of bugs and if you wanna help me to fix the bugs, just contact me [here](hashinami46@gmail.com).
+This is the app bundle version. I don't wanna put the source code here. It still lacks of bugs and if you wanna help me to fix the bugs, just contact me [here](hashinami46@gmail.com). 
 
 ## 📝 Requirements
 ### **Runtime**
@@ -37,28 +37,71 @@ This is the app bundle version. I don't wanna put the source code here. It still
 - PyCriCodecs
 
 ## 🛠️ Installation and Setup
-The installation tutorial below is only for linux user. So, if you using windows, just search for the libs installation tutorial. 
 ### 🐇 Quick Installation 
-You can easily run `bash install.sh` for quick setup. Try install the libs manually if you facing an error.\
+**For linux user**, you can easily run `bash install.sh` for quick setup. Try install the libs manually if you facing an error.\
 For downloading mobame assets, you need to setup your credentials in `.config/secrets.credentials.json`. Just fill the `refresh_token` and this app will autogenerate the `access_token`.
 ### 🐢 Manual Installation
-1. Install Node, Python3, and external dependencies such as wget, ffmpeg, and git
-```
-sudo apt update && sudo apt upgrade -y
-sudo apt install -y nodejs npm python3 git ffmpeg wget
-sudo npm i -g n
-sudo n latest -y
-```
+1. Install Node with npm, Python3 with pip, and external dependencies such as wget, ffmpeg, and git
+- [git](https://git-scm.com/downloads)
+- [wget](https://www.gnu.org/software/wget/)
+- [ffmpeg](https://ffmpeg.org/download.html)
+- [Nodejs](https://nodejs.org/en/download)
+- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- [Python](https://www.python.org/downloads/)
+- [pip](https://pip.pypa.io/en/stable/installation/)
 2. Install Libs
+- **Try excuting this command to check the runtime is already installed or not.**
 ```
-python3 -m ensurepip --upgrade
+node --version
+npm --version
+# python3 for linux, python for windows
+python3 --version
+pip --version
+```
+- **If you don't get any errors, continue to the next step. Download the PyCriCodecs.**
+```
 pip install -r requirements.txt
 git clone https://github.com/Youjose/PyCriCodecs.git
-cp -f .config/PyCriCodecs.setup.py PyCriCodecs/setup.py
-cd PyCriCodecs && pip install . -v && cd ../ && rm -rf PyCriCodecs
+```
+- **For linux user, you should edit the setup.py in PyCriCodecs because linux doesn't support \\ to declare path. You can skip this if you using windows.**
+```
+# in the part
+"CriCodecs\\CriCodecs.cpp"
+# change to
+"CriCodecs/CriCodecs.cpp"
+```
+- **The last step is go to PyCriCodecs dir and excute this command in the terminal.**
+```
+pip install . -v
+```
+- **Finally you can remove PyCriCodecs dir since it's already installed in your system.**
+3. Setup Credentials
+- **Fill the `refresh_token` for each group and the guide is finished.**
+```
+...
+"nogitalk": {
+    "name": "nogizaka46-talk",
+    "email": "",
+    "refresh_token": "",
+    "access_token": "",
+    "type": "mobame",
+    "appname": "nogizaka46-mobame"
+  },
+...
 ```
 
-Please read till the end for common usage and knowledge. I also put some useful links on credits.
+Please read till the end for common usage and knowledge. 
+
+## 🆕 Updating Guide
+**Always use the latest package update because there might be some bugs fix.**
+- **Using git clone**
+If you use git clone to download these assets just simply excute this command in the project root directory. It will automatically download the latest update.
+```
+git pull origin main
+```
+If you get error message "dubious ownership in repository", just copy the code "git config --global --add blablabla" to your terminal and retry the pull command.
+- **Download from zip**
+If you already mastering git and download the app from zip, you should download the update and extract the contents inside the zip to your old project root dir. If you got replace confirmation message, just say yes. It won't delete your catalog or downloads dir.
 
 ## 🔫 Supported Apps and Usage
 ### 🎮 Nogifes
@@ -230,6 +273,12 @@ node cli.js -A asukatalk -T timeline -M 齋藤飛鳥 -D 2022-06-28 2022-06-30 --
 > Unfortunately Pillow 9.0.1 doesn't supported in python 3.11 for now. You should downgrade your python to 3.10.
 - Node syntax missmatch
 > Make sure that you already installed Node v18 or above.
+- Python syntax missmatch
+> It's weird. If you already updated this app, you won't facing this errors.
+- Suddenly error when downloading nogifes card
+> It's normal. Try to rerun the command again. This error usually occurs because your network.
+- Error occurred when extracting Hinakoi and Sakukoi assets.
+> 2 reason. You placed the wrong catalog or you have the newest catalog and you give the catalog name with the old one. For example, latest sakukoi catalog is sakukoi_catalog_223090101, but you naming it like this sakukoi_catalog_223080201 this will make you get an error because latest assets doesn't found in the old server path.
 
 ## 📑 Note
 * How to get `refresh_token`? 
@@ -243,15 +292,10 @@ CREDS_PATH=".config/.secrets.credentials.json"
 ```
 * How to download movie in nogikoi?
 > Nah. Idk since the movies is securely encrypted.
-* Can't downloads hinakoi and sakukoi even if catalog already provided.
+* Can't downloads hinakoi and sakukoi assets even if catalog already provided.
 > It's a bit tricky. Try to extract the catalog using zip extractor like winrar or ZArchiver, then rename the extracted catalog to something like the directory tree above. If you lucky, you won't get any errors.
 
 ## ⭐ Credits
-- [git](https://git-scm.com/downloads)
-- [wget](https://www.gnu.org/software/wget/)
-- [ffmpeg](https://ffmpeg.org/download.html)
-- [Nodejs](https://nodejs.org/en/download)
-- [Python](https://www.python.org/downloads/)
 - [Colmsg](https://github.com/proshunsuke/colmsg)
 - [UnityPy](https://pypi.org/project/UnityPy/)
 - [PyCriCodecs](https://github.com/Youjose/PyCriCodecs) 

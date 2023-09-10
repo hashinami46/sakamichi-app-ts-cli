@@ -17,6 +17,7 @@ Typescript based cli tools to download Sakamichi Series App assets such as photo
 Each assets need different requirements. You will facing error if you haven't install or provide the requirements needed. 
 
 ## ⚠️ Warning!
+Please read till the end for common usage and knowledge. \
 ~~This app is only supported linux for now! I don't have any idea why it won't work on windows.~~ \
 I found the bug that caused errors on windows. So, I created a separated python script to extract the assets. \
 If you encounter any errors, maybe you haven't installed the requirements. \
@@ -90,17 +91,15 @@ pip install . -v
 ...
 ```
 
-Please read till the end for common usage and knowledge. 
-
 ## 🆕 Updating Guide
 **Always use the latest package update because there might be some bugs fix.**
-- **Using git clone**
+- **Using git clone** \
 If you use git clone to download these assets just simply excute this command in the project root directory. It will automatically download the latest update.
+Just copy the code "git config --global --add blablabla" to your terminal and retry the pull command if you get error message "dubious ownership in repository".
 ```
 git pull origin main
 ```
-If you get error message "dubious ownership in repository", just copy the code "git config --global --add blablabla" to your terminal and retry the pull command.
-- **Download from zip**
+- **Download from zip** \
 If you already mastering git and download the app from zip, you should download the update and extract the contents inside the zip to your old project root dir. If you got replace confirmation message, just say yes. It won't delete your catalog or downloads dir.
 
 ## 🔫 Supported Apps and Usage
@@ -202,8 +201,8 @@ Arguments
 -T Asset Type
 -f & -t I'm not sure how many digits since it depends on the catalog you provided. 
 
-node cli.js -A sakukoi -T card -f 03000 -t 03500
-node cli.js -A hinakoi -T movie -f 03000 -t 03500
+node cli.js -A sakukoi -T card -f 03000 -t 04000
+node cli.js -A sakukoi -T movie -f 09470 -t 10000
 ```
 
 ### 💌 Sakamichi Mobile Messages
@@ -236,6 +235,16 @@ node cli.js -A asukatalk -T timeline -M 齋藤飛鳥 -D 2022-06-28
 node cli.js -A asukatalk -T timeline -M 齋藤飛鳥 -D 2022-06-28 2022-06-30 --text
 ```
 
+### ⚙️ Other Arguments
+```
+Arguments 
+--cheatsheet Display member id table. Should be n46, s46, h46, or asuka
+-v, --version Show app build version
+
+node cli.js --cheatsheet n46
+node cli.js -v
+```
+
 ## 🌲 Directory Structure
 ```
 .
@@ -256,6 +265,13 @@ node cli.js -A asukatalk -T timeline -M 齋藤飛鳥 -D 2022-06-28 2022-06-30 --
 - [ ] Create Nogifra assets decrypter.
 
 ## 🪵 Changelog
+- 2023-09-10_1.0.2
+```
+• Fix Sakukoi and Hinakoi movie download logic.
+  The app will skip already downloaded movies and make it faster.
+• You can set custom download dir.
+  Declare SAKAMICHI_SAVE_DIR="" in .env and fill with the custom path you want.
+```
 - 2023-09-07_1.0.1
 ```
 • Minor bug fix
@@ -276,7 +292,7 @@ node cli.js -A asukatalk -T timeline -M 齋藤飛鳥 -D 2022-06-28 2022-06-30 --
 - Python syntax missmatch
 > It's weird. If you already updated this app, you won't facing this errors.
 - Suddenly error when downloading nogifes card
-> It's normal. Try to rerun the command again. This error usually occurs because your network.
+> It's normal. Try to rerun the command again. This error usually occurs because of your network.
 - Error occurred when extracting Hinakoi and Sakukoi assets.
 > 2 reason. You placed the wrong catalog or you have the newest catalog and you give the catalog name with the old one. For example, latest sakukoi catalog is sakukoi_catalog_223090101, but you naming it like this sakukoi_catalog_223080201 this will make you get an error because latest assets doesn't found in the old server path.
 

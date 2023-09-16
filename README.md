@@ -205,7 +205,7 @@ Arguments
 
 node cli.js -A sakukoi -T card -f 03000 -t 04000
 node cli.js -A sakukoi -T movie -f 09470 -t 10000
-node cli.js -A hinakoi -T card -f 56000 -t 57000
+node cli.js -A hinakoi -T card -f 40000 -t 56000
 ```
 
 ### 🎮 Nogifra

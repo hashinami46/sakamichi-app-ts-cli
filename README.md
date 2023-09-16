@@ -194,6 +194,8 @@ node cli.js -A nogikoi -S 1 -T card_p_jpg -s 8 -f 9999 -t 10000
 ```
 
 ### 🎮 Sakukoi & Hinakoi
+Because of the difficult of obtaining the catalog, I decided to put the latest catalog in gdrive folder. Please download the latest only! \
+[SAKUHINA_CATALOG](https://drive.google.com/drive/folders/1OuEQk4pZH3N5ReRrSbQFMcMUimPSp5V6)
 - **Card & Movie**
 ```
 Arguments
@@ -203,6 +205,22 @@ Arguments
 
 node cli.js -A sakukoi -T card -f 03000 -t 04000
 node cli.js -A sakukoi -T movie -f 09470 -t 10000
+node cli.js -A hinakoi -T card -f 56000 -t 57000
+```
+
+### 🎮 Nogifra
+- **Images, Movies, and Sounds** \
+You should copy the assets from the games data folder to .temp. \
+For example, just simply copy the `/Android/data/jp.co.gu3.delta/files/DlcAssets/android-ja/raws/movies` to `.temp/Nogifra/movies`.\
+Please check the directory tree sample below. Don't perform command to download nogifes assets, because it will delete the .temp folder!
+```
+Arguments
+-A Appname
+-T Asset Type
+
+node cli.js -A nogifra -T images
+node cli.js -A nogifra -T movies
+node cli.js -A nogifra -T sounds
 ```
 
 ### 💌 Sakamichi Mobile Messages
@@ -249,22 +267,34 @@ node cli.js -v
 ```
 .
 ├── .catalog
-│   ├── hinakoi_catalog_223072101
+│   ├── hinakoi_catalog_223090501
 │   └── sakukoi_catalog_223090101
 ├── .config
 │   └── .secrets.credentials.json
 ├── .deps
 │   └── Downloader.py
+├── .temp
+│   └── Nogifra
+│       ├── images
+│       ├── movies
+│       └── sounds
 ├── .env
 └── cli.js
 ```
 
 ## 📋 To do List
 - [ ] Create blogs downloader.
-- [ ] Create audio types assets downloader.
-- [ ] Create Nogifra assets decrypter.
+- [x] Create Nogifra assets decrypter.
 
 ## 🪵 Changelog
+- 2023-09-16_1.3.2
+```
+• Fix bug in windows.
+• Fix project root path.
+• Add support for decrypting Nogifra assets.
+  Copy the game data folder to .temp folder and run the script! The images placed in bundles, sounds in sounds, and movies in movies.
+```
+
 - 2023-09-10_1.0.2
 ```
 • Fix Sakukoi and Hinakoi movie download logic.
@@ -295,6 +325,8 @@ node cli.js -v
 > It's normal. Try to rerun the command again. This error usually occurs because of your network.
 - Error occurred when extracting Hinakoi and Sakukoi assets.
 > 2 reason. You placed the wrong catalog or you have the newest catalog and you give the catalog name with the old one. For example, latest sakukoi catalog is sakukoi_catalog_223090101, but you naming it like this sakukoi_catalog_223080201 this will make you get an error because latest assets doesn't found in the old server path.
+- Error in Windows
+> Please report at issue section.
 
 ## 📑 Note
 * How to get `refresh_token`? 

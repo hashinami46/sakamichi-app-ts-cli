@@ -1,4 +1,4 @@
 httpx==0.23.3
-pillow==9.0.1
+pillow==10.0.1
 UnityPy==1.10.0
 argparse==1.4.0

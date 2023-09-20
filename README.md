@@ -71,7 +71,7 @@ git clone https://github.com/Youjose/PyCriCodecs.git
 # change to
 "CriCodecs/CriCodecs.cpp"
 ```
-- **The last step is go to PyCriCodecs dir and excute this command in the terminal.**
+- **The last step is go to PyCriCodecs dir and execute this command in the terminal.**
 ```
 pip install . -v
 ```
@@ -94,7 +94,7 @@ pip install . -v
 ## 🆕 Updating Guide
 **Always use the latest package update because there might be some bugs fix.**
 - **Using git clone** \
-If you use git clone to download these assets just simply excute this command in the project root directory. It will automatically download the latest update.
+If you use git clone to download these assets just simply execute this command in the project root directory. It will automatically download the latest update.
 Just copy the code "git config --global --add blablabla" to your terminal and retry the pull command if you get error message "dubious ownership in repository".
 ```
 git pull origin main
@@ -287,6 +287,11 @@ node cli.js -v
 - [x] Create Nogifra assets decrypter.
 
 ## 🪵 Changelog
+- 2023-09-20_1.4.2
+```
+- Mobame API minor update.
+- Change requirements so that Pillow can be installed on Python 3.11
+```
 - 2023-09-16_1.3.2
 ```
 • Fix bug in windows.
@@ -294,11 +299,10 @@ node cli.js -v
 • Add support for decrypting Nogifra assets.
   Copy the game data folder to .temp folder and run the script! The images placed in bundles, sounds in sounds, and movies in movies.
 ```
-
 - 2023-09-10_1.0.2
 ```
 • Fix Sakukoi and Hinakoi movie download logic.
-  The app will skip already downloaded movies and make it faster.
+  The app will skip downloaded movies and make it faster.
 • You can set custom download dir.
   Declare SAKAMICHI_SAVE_DIR="" in .env and fill with the custom path you want.
 ```
@@ -316,7 +320,7 @@ node cli.js -v
 
 ## 🐞 Known Bugs
 - Failed install Pillow
-> Unfortunately Pillow 9.0.1 doesn't supported in python 3.11 for now. You should downgrade your python to 3.10.
+> Please rerun the requirements installation or search Pillow version that compatible on your python version.
 - Node syntax missmatch
 > Make sure that you already installed Node v18 or above.
 - Python syntax missmatch

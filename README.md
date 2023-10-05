@@ -194,8 +194,8 @@ node cli.js -A nogikoi -S 1 -T card_p_jpg -s 8 -f 9999 -t 10000
 ```
 
 ### 🎮 Sakukoi & Hinakoi
-Because of the difficult of obtaining the catalog, I decided to put the latest catalog in gdrive folder. Please download the latest only!. \
-If you wanna convert the assets directly from local, just simply copy the data from app folder in `android/data/<sakukoi or hinakoi folder>` to `.temp/<Sakukoi or Hinakoi>/<card or movie>`
+If you wanna convert the assets directly from local, just simply copy the data from app folder in `android/data/<sakukoi or hinakoi folder>` to `.temp/<Sakukoi or Hinakoi>/<card or movie>`. \
+Because of the difficult of obtaining the catalog, I decided to put the latest catalog in gdrive folder. Please download the latest only! \
 [SAKUHINA_CATALOG](https://drive.google.com/drive/folders/1OuEQk4pZH3N5ReRrSbQFMcMUimPSp5V6)
 - **Card & Movie**
 ```

@@ -51,7 +51,7 @@ For downloading mobame assets, you need to setup your credentials in `.config/se
 - [Python](https://www.python.org/downloads/)
 - [pip](https://pip.pypa.io/en/stable/installation/)
 2. Install Libs
-- **Try excuting this command to check the runtime is already installed or not.**
+- **Try executing this command to check the runtime is already installed or not.**
 ```
 node --version
 npm --version
@@ -194,18 +194,22 @@ node cli.js -A nogikoi -S 1 -T card_p_jpg -s 8 -f 9999 -t 10000
 ```
 
 ### 🎮 Sakukoi & Hinakoi
-Because of the difficult of obtaining the catalog, I decided to put the latest catalog in gdrive folder. Please download the latest only! \
+Because of the difficult of obtaining the catalog, I decided to put the latest catalog in gdrive folder. Please download the latest only!. \
+If you wanna convert the assets directly from local, just simply copy the data from app folder in `android/data/<sakukoi or hinakoi folder>` to `.temp/<Sakukoi or Hinakoi>/<card or movie>`
 [SAKUHINA_CATALOG](https://drive.google.com/drive/folders/1OuEQk4pZH3N5ReRrSbQFMcMUimPSp5V6)
 - **Card & Movie**
 ```
 Arguments
 -A Appname
 -T Asset Type
+-S Asset from catalog or local. Should be local or catalog
 -f & -t I'm not sure how many digits since it depends on the catalog you provided. 
 
-node cli.js -A sakukoi -T card -f 03000 -t 04000
-node cli.js -A sakukoi -T movie -f 09470 -t 10000
-node cli.js -A hinakoi -T card -f 40000 -t 56000
+node cli.js -A sakukoi -S local -T card
+node cli.js -A sakukoi -S catalog -T card -f 03000 -t 04000
+node cli.js -A sakukoi -S catalog -T movie -f 09470 -t 10000
+node cli.js -A hinakoi -S local -T movie
+node cli.js -A hinakoi -S catalog -T card -f 40000 -t 56000
 ```
 
 ### 🎮 Nogifra
@@ -267,13 +271,16 @@ node cli.js -v
 ```
 .
 ├── .catalog
-│   ├── hinakoi_catalog_223090501
-│   └── sakukoi_catalog_223090101
+│   ├── hinakoi_catalog_223072101
+│   └── sakukoi_catalog_223071902
 ├── .config
 │   └── .secrets.credentials.json
 ├── .deps
 │   └── Downloader.py
 ├── .temp
+│   ├── Hinakoi
+│   │   ├── card
+│   │   └── movie
 │   └── Nogifra
 │       ├── images
 │       ├── movies
@@ -287,10 +294,15 @@ node cli.js -v
 - [x] Create Nogifra assets decrypter.
 
 ## 🪵 Changelog
+- 2023-10-05_1.5.2
+```
+• Minor bug fix
+• You can now download Sakukoi or Hinakoi assets manually from local or catalog
+```
 - 2023-09-20_1.4.2
 ```
-- Mobame API minor update.
-- Change requirements so that Pillow can be installed on Python 3.11
+• Mobame API minor update.
+• Change requirements so that Pillow can be installed on Python 3.11
 ```
 - 2023-09-16_1.3.2
 ```

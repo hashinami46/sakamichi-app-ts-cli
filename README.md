@@ -227,6 +227,24 @@ node cli.js -A nogifra -T movies
 node cli.js -A nogifra -T sounds
 ```
 
+### 🎮 Unison
+- **Images, Movies, and Sounds** \
+You should prepare the catalog like Sakukoi and Hinakoi to download the assets. \
+If wonder where to get the catalog, I already put it in the same folder as Sakukoi/Hinakoi. \
+Some assets that you can download from this game is 
+`scene_card`, `stamp`, `appeal_movie`, `fav_rank_cheer`, `fav_rank_movie`, `exf_member_movie`, `gacha_effect_chara`, `gacha_effect_pickup`, `gacha_movie`, `live_movie`, `profile_movie`, `chara_movie`, `chara_profile`, `smart_movie`, `movie_photo`, `bgm`, `voice`. \
+[UNISON_CATALOG](https://drive.google.com/drive/folders/1OuEQk4pZH3N5ReRrSbQFMcMUimPSp5V6)
+```
+Arguments
+-A Appname
+-T Asset Type
+-f & -t I'm not sure how many digits since it depends on the asset type that you input. 
+   If you not sure how many digit, you can use -f 0 -t 0 to grab them all.
+
+node cli.js -A unison -T scene_card -f 0 -t 0
+node cli.js -A unison -T smart_movie -f 0 -t 0
+```
+
 ### 💌 Sakamichi Mobile Messages
 - **All Daily Text, Images, Videos, and Call**
 ```
@@ -271,10 +289,12 @@ node cli.js -v
 ```
 .
 ├── .catalog
-│   ├── hinakoi_catalog_223072101
-│   └── sakukoi_catalog_223071902
+│   ├── hinakoi_catalog_223121101
+│   ├── sakukoi_catalog_223120501
+│   └── unison_catalog_20231116141026
 ├── .config
-│   └── .secrets.credentials.json
+│   ├── .secrets.credentials.json
+│   └── member.data.json
 ├── .deps
 │   └── Downloader.py
 ├── .temp
@@ -291,9 +311,15 @@ node cli.js -v
 
 ## 📋 To do List
 - [ ] Create blogs downloader.
-- [x] Create Nogifra assets decrypter.
 
 ## 🪵 Changelog
+- 2023-12-12_2.0.0
+```
+• Minor bug fix
+• Separate member database to make it editable
+• You can now download Uni's On Air assets as long as you have the catalog
+```
+
 - 2023-10-05_1.5.2
 ```
 • Minor bug fix

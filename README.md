@@ -196,7 +196,7 @@ node cli.js -A nogikoi -S 1 -T card_p_jpg -s 8 -f 9999 -t 10000
 ### 🎮 Sakukoi & Hinakoi
 If you wanna convert the assets directly from local, just simply copy the data from app folder in `android/data/<sakukoi or hinakoi folder>` to `.temp/<Sakukoi or Hinakoi>/<card or movie>`. \
 Because of the difficult of obtaining the catalog, I decided to put the latest catalog in gdrive folder. Please download the latest only! \
-[SAKUHINA_CATALOG](https://drive.google.com/drive/folders/1OuEQk4pZH3N5ReRrSbQFMcMUimPSp5V6)
+[SAKUHINA_CATALOG](https://drive.google.com/drive/folders/1xR8N2A5x4vryXah5VSZAADaRf8nXVpF2)
 - **Card & Movie**
 ```
 Arguments
@@ -233,7 +233,7 @@ You should prepare the catalog like Sakukoi and Hinakoi to download the assets. 
 If wonder where to get the catalog, I already put it in the same folder as Sakukoi/Hinakoi. \
 Some assets that you can download from this game is 
 `scene_card`, `stamp`, `appeal_movie`, `fav_rank_cheer`, `fav_rank_movie`, `exf_member_movie`, `gacha_effect_chara`, `gacha_effect_pickup`, `gacha_movie`, `live_movie`, `profile_movie`, `chara_movie`, `chara_profile`, `smart_movie`, `movie_photo`, `bgm`, `voice`. \
-[UNISON_CATALOG](https://drive.google.com/drive/folders/1OuEQk4pZH3N5ReRrSbQFMcMUimPSp5V6)
+[UNISON_CATALOG](https://drive.google.com/drive/folders/1xR8N2A5x4vryXah5VSZAADaRf8nXVpF2)
 ```
 Arguments
 -A Appname

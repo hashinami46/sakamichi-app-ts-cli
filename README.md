@@ -313,11 +313,17 @@ node cli.js -v
 - [ ] Create blogs downloader.
 
 ## 🪵 Changelog
+- 2023-12-22_2.3.0
+```
+• Minor bug fix.
+• Fix logic to download and extract assets from Hinakoi/Sakukoi and Unison game.
+```
+
 - 2023-12-12_2.0.0
 ```
-• Minor bug fix
-• Separate member database to make it editable
-• You can now download Uni's On Air assets as long as you have the catalog
+• Minor bug fix.
+• Separate member database to make it editable.
+• You can now download Uni's On Air assets as long as you have the catalog.
 ```
 
 - 2023-10-05_1.5.2
@@ -384,6 +390,8 @@ CREDS_PATH=".config/.secrets.credentials.json"
 > Nah. Idk since the movies is securely encrypted.
 * Can't downloads hinakoi and sakukoi assets even if catalog already provided.
 > It's a bit tricky. Try to extract the catalog using zip extractor like winrar or ZArchiver, then rename the extracted catalog to something like the directory tree above. If you lucky, you won't get any errors.
+* How to obtain catalog?
+> Sorry, but that's a secret. The way is same as how to obtain the mobame credentials. Don't worry, I will try to provide the newest catalog on my drive.
 
 ## ⭐ Credits
 - [Colmsg](https://github.com/proshunsuke/colmsg)

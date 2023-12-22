@@ -524,180 +524,315 @@
       "name": "櫻坂46",
       "gen": "",
       "sakukoi": "",
+      "unison": "",
       "sakumsg": "33"
     },
     {
       "name": "新参者櫻坂46三期生",
       "gen": "",
       "sakukoi": "",
+      "unison": "",
       "sakumsg": "73"
+    },
+    {
+      "name": "石森虹花",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "101",
+      "sakumsg": ""
     },
     {
       "name": "上村莉菜",
       "gen": "1",
       "sakukoi": "01",
+      "unison": "103",
       "sakumsg": "4"
+    },
+    {
+      "name": "尾関梨香",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "104",
+      "sakumsg": ""
+    },
+    {
+      "name": "織田奈那",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "105",
+      "sakumsg": ""
     },
     {
       "name": "小池美波",
       "gen": "1",
       "sakukoi": "02",
+      "unison": "106",
       "sakumsg": "7"
     },
     {
       "name": "小林由依",
       "gen": "1",
       "sakukoi": "03",
+      "unison": "107",
       "sakumsg": "8"
     },
     {
       "name": "齋藤冬優花",
       "gen": "1",
       "sakukoi": "04",
+      "unison": "108",
       "sakumsg": "9"
+    },
+    {
+      "name": "佐藤詩織",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "109",
+      "sakumsg": ""
+    },
+    {
+      "name": "菅井友香",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "111",
+      "sakumsg": ""
+    },
+    {
+      "name": "鈴本美愉",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "112",
+      "sakumsg": ""
+    },
+    {
+      "name": "長沢菜々香",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "113",
+      "sakumsg": ""
     },
     {
       "name": "土生瑞穂",
       "gen": "1",
       "sakukoi": "05",
+      "unison": "115",
       "sakumsg": "15"
+    },
+    {
+      "name": "原田葵",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "116",
+      "sakumsg": ""
+    },
+    {
+      "name": "平手友梨奈",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "117",
+      "sakumsg": ""
+    },
+    {
+      "name": "守屋茜",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "118",
+      "sakumsg": ""
+    },
+    {
+      "name": "渡辺梨加",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "120",
+      "sakumsg": ""
+    },
+    {
+      "name": "渡邉理佐",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "121",
+      "sakumsg": ""
+    },
+    {
+      "name": "井上梨名",
+      "gen": "2",
+      "sakukoi": "",
+      "unison": "122",
+      "sakumsg": ""
+    },
+    {
+      "name": "関有美子",
+      "gen": "2",
+      "sakukoi": "",
+      "unison": "123",
+      "sakumsg": ""
     },
     {
       "name": "遠藤光",
       "gen": "2",
       "sakukoi": "02",
+      "unison": "131",
       "sakumsg": ""
     },
     {
       "name": "大園玲",
       "gen": "2",
       "sakukoi": "03",
+      "unison": "132",
       "sakumsg": "56"
     },
     {
       "name": "大沼晶保",
       "gen": "2",
       "sakukoi": "04",
+      "unison": "133",
       "sakumsg": "57"
     },
     {
       "name": "幸坂茉莉乃",
       "gen": "2",
       "sakukoi": "05",
+      "unison": "134",
       "sakumsg": "58"
     },
     {
       "name": "武元唯衣",
       "gen": "2",
       "sakukoi": "06",
+      "unison": "124",
       "sakumsg": "46"
     },
     {
       "name": "田村保乃",
       "gen": "2",
       "sakukoi": "07",
+      "unison": "125",
       "sakumsg": "47"
     },
     {
       "name": "藤吉夏鈴",
       "gen": "2",
       "sakukoi": "08",
+      "unison": "126",
       "sakumsg": "48"
     },
     {
       "name": "増本綺良",
       "gen": "2",
       "sakukoi": "09",
+      "unison": "135",
       "sakumsg": "59"
     },
     {
       "name": "松田里奈",
       "gen": "2",
       "sakukoi": "10",
+      "unison": "127",
       "sakumsg": "49"
+    },
+    {
+      "name": "松平璃子",
+      "gen": "2",
+      "sakukoi": "",
+      "unison": "128",
+      "sakumsg": ""
     },
     {
       "name": "森田ひかる",
       "gen": "2",
       "sakukoi": "11",
+      "unison": "129",
       "sakumsg": "51"
     },
     {
       "name": "守屋麗奈",
       "gen": "2",
       "sakukoi": "12",
+      "unison": "136",
       "sakumsg": "60"
     },
     {
       "name": "山﨑天",
       "gen": "2",
       "sakukoi": "13",
+      "unison": "130",
       "sakumsg": "52"
     },
     {
       "name": "石森璃花",
       "gen": "3",
       "sakukoi": "01",
+      "unison": "137",
       "sakumsg": "62"
     },
     {
       "name": "遠藤理子",
       "gen": "3",
       "sakukoi": "02",
+      "unison": "138",
       "sakumsg": "63"
     },
     {
       "name": "小田倉麗奈",
       "gen": "3",
       "sakukoi": "03",
+      "unison": "139",
       "sakumsg": "64"
     },
     {
       "name": "小島凪紗",
       "gen": "3",
       "sakukoi": "04",
+      "unison": "140",
       "sakumsg": "65"
     },
     {
       "name": "谷口愛季",
       "gen": "3",
       "sakukoi": "05",
+      "unison": "141",
       "sakumsg": "66"
     },
     {
       "name": "中嶋優月",
       "gen": "3",
       "sakukoi": "06",
+      "unison": "142",
       "sakumsg": "67"
     },
     {
       "name": "的野美青",
       "gen": "3",
       "sakukoi": "07",
+      "unison": "143",
       "sakumsg": "68"
     },
     {
       "name": "向井純葉",
       "gen": "3",
       "sakukoi": "08",
+      "unison": "144",
       "sakumsg": "69"
     },
     {
       "name": "村井優",
       "gen": "3",
       "sakukoi": "09",
+      "unison": "145",
       "sakumsg": "70"
     },
     {
       "name": "村山美羽",
       "gen": "3",
       "sakukoi": "10",
+      "unison": "146",
       "sakumsg": "71"
     },
     {
       "name": "山下瞳月",
       "gen": "3",
       "sakukoi": "11",
+      "unison": "147",
       "sakumsg": "72"
     }
   ],
@@ -706,210 +841,259 @@
       "name": "日向坂46",
       "gen": "",
       "hinakoi": "",
+      "unison": "",
       "hinamsg": "43"
     },
     {
       "name": "新参者日向坂46四期生",
       "gen": "",
       "hinakoi": "",
+      "unison": "",
       "hinamsg": "78"
+    },
+    {
+      "name": "井口眞緒",
+      "gen": "1",
+      "hinakoi": "",
+      "unison": "201",
+      "sakumsg": ""
     },
     {
       "name": "潮紗理菜",
       "gen": "1",
       "hinakoi": "01",
+      "unison": "202",
       "hinamsg": "22"
+    },
+    {
+      "name": "影山優佳",
+      "gen": "1",
+      "hinakoi": "",
+      "unison": "204",
+      "sakumsg": ""
     },
     {
       "name": "加藤史帆",
       "gen": "1",
       "hinakoi": "03",
+      "unison": "205",
       "hinamsg": "25"
     },
     {
       "name": "齊藤京子",
       "gen": "1",
       "hinakoi": "04",
+      "unison": "206",
       "hinamsg": "26"
     },
     {
       "name": "佐々木久美",
       "gen": "1",
       "hinakoi": "05",
+      "unison": "207",
       "hinamsg": "27"
     },
     {
       "name": "佐々木美玲",
       "gen": "1",
       "hinakoi": "06",
+      "unison": "208",
       "hinamsg": "28"
     },
     {
       "name": "高瀬愛奈",
       "gen": "1",
       "hinakoi": "07",
+      "unison": "209",
       "hinamsg": "29"
     },
     {
       "name": "高本彩花",
       "gen": "1",
       "hinakoi": "08",
+      "unison": "210",
       "hinamsg": "30"
     },
     {
       "name": "東村芽依",
       "gen": "1",
       "hinakoi": "09",
+      "unison": "211",
       "hinamsg": "32"
     },
     {
       "name": "金村美玖",
       "gen": "2",
       "hinakoi": "01",
+      "unison": "212",
       "hinamsg": "34"
     },
     {
       "name": "河田陽菜",
       "gen": "2",
       "hinakoi": "02",
+      "unison": "213",
       "hinamsg": "35"
     },
     {
       "name": "小坂菜緒",
       "gen": "2",
       "hinakoi": "03",
+      "unison": "214",
       "hinamsg": "36"
     },
     {
       "name": "富田鈴花",
       "gen": "2",
       "hinakoi": "04",
+      "unison": "215",
       "hinamsg": "37"
     },
     {
       "name": "丹生明里",
       "gen": "2",
       "hinakoi": "05",
+      "unison": "216",
       "hinamsg": "38"
     },
     {
       "name": "濱岸ひより",
       "gen": "2",
       "hinakoi": "06",
+      "unison": "217",
       "hinamsg": "39"
     },
     {
       "name": "松田好花",
       "gen": "2",
       "hinakoi": "07",
+      "unison": "218",
       "hinamsg": "40"
     },
     {
       "name": "宮田愛萌",
       "gen": "2",
       "hinakoi": "08",
+      "unison": "219",
       "hinamsg": ""
     },
     {
       "name": "渡邉美穂",
       "gen": "2",
       "hinakoi": "09",
+      "unison": "220",
       "hinamsg": ""
     },
     {
       "name": "上村ひなの",
       "gen": "3",
       "hinakoi": "01",
+      "unison": "221",
       "hinamsg": "53"
     },
     {
       "name": "髙橋未来虹",
       "gen": "3",
       "hinakoi": "02",
+      "unison": "222",
       "hinamsg": "61"
     },
     {
       "name": "森本茉莉",
       "gen": "3",
       "hinakoi": "03",
+      "unison": "223",
       "hinamsg": "62"
     },
     {
       "name": "山口陽世",
       "gen": "3",
       "hinakoi": "04",
+      "unison": "224",
       "hinamsg": "63"
     },
     {
       "name": "石塚瑶季",
       "gen": "4",
       "hinakoi": "01",
+      "unison": "225",
       "hinamsg": "66"
     },
     {
       "name": "岸帆夏",
       "gen": "4",
       "hinakoi": "02",
+      "unison": "226",
       "hinamsg": "67"
     },
     {
       "name": "小西夏菜実",
       "gen": "4",
       "hinakoi": "03",
+      "unison": "227",
       "hinamsg": "68"
     },
     {
       "name": "清水理央",
       "gen": "4",
       "hinakoi": "04",
+      "unison": "228",
       "hinamsg": "69"
     },
     {
       "name": "正源司陽子",
       "gen": "4",
       "hinakoi": "05",
+      "unison": "229",
       "hinamsg": "70"
     },
     {
       "name": "竹内希来里",
       "gen": "4",
       "hinakoi": "06",
+      "unison": "230",
       "hinamsg": "71"
     },
     {
       "name": "平尾帆夏",
       "gen": "4",
       "hinakoi": "07",
+      "unison": "231",
       "hinamsg": "72"
     },
     {
       "name": "平岡海月",
       "gen": "4",
       "hinakoi": "08",
+      "unison": "232",
       "hinamsg": "73"
     },
     {
       "name": "藤嶌果歩",
       "gen": "4",
       "hinakoi": "09",
+      "unison": "233",
       "hinamsg": "74"
     },
     {
       "name": "宮地すみれ",
       "gen": "4",
       "hinakoi": "10",
+      "unison": "234",
       "hinamsg": "75"
     },
     {
       "name": "山下葉留花",
       "gen": "4",
       "hinakoi": "11",
+      "unison": "235",
       "hinamsg": "76"
     },
     {
       "name": "渡辺莉奈",
       "gen": "4",
       "hinakoi": "12",
+      "unison": "236",
       "hinamsg": "77"
     }
   ],

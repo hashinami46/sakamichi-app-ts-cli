@@ -153,13 +153,15 @@ def downloader_mode_7(
   
   def executor(
     filename: str,
-    signature: str
+    signature
   ) -> None:
     member_data = [data for data in s46_member_data + h46_member_data if re.search(r"_(\d{3})$" if re.search(r"(live_movie|voice)", filename) else r"_(\d{3})_", filename.replace(".cpk", "")) and data["unison"] == re.search(r"_(\d{3})$" if re.search(r"(live_movie|voice)", filename) else r"_(\d{3})_", filename.replace(".cpk", "")).group(1)]
     save_folder = os.path.join(path_local, "/".join(filename.split("/")[:-1]), f'{member_data[0]["unison"][0]}{int(member_data[0]["gen"]):02}. {member_data[0]["name"]}') if member_data else os.path.join(path_local, "/".join(filename.split("/")[:-1]), "000. 不特定") if not re.search(r"(appeal_movie)", asset_type) else os.path.join(path_local, "/".join(filename.split("/")[:-1]))
+    if signature:
+      urlserver[2] = "cf.unis-on-air.com"
     if re.match(r"^sound.*\.cpk$", filename):
       if not os.path.exists(os.path.join(save_folder, filename.split("/")[-1].replace(".cpk", ".wav"))):
-        with httpx.stream("GET", "/".join(urlserver) + f"/{filename}?{signature}", timeout=None) as res:
+        with httpx.stream("GET", "/".join(urlserver) + f"/{filename}{'?'+signature if signature else ''}", timeout=None) as res:
           if res.status_code != 200:
             print("\x1b[38;5;1mWhoops, server error\x1b[0m")
             exit(1)
@@ -178,35 +180,37 @@ def downloader_mode_7(
     if re.match(r"^video.*\.cpk$", filename):
       if not os.path.exists(os.path.join(save_folder, filename.split("/")[-1].replace(".cpk", ".mp4"))):
         print(f'／ Downloading {filename.split("/")[-1].replace(".cpk", "")} ＼')
-        with httpx.stream("GET", "/".join(urlserver) + f"/{filename}?{signature}", timeout=None) as res:
+        with httpx.stream("GET", "/".join(urlserver) + f"/{filename}{'?'+signature if signature else ''}", timeout=None) as res:
           if res.status_code != 200:
             print("\x1b[38;5;1mWhoops, server error\x1b[0m")
             exit(1)
           open(filename.split("/")[-1], "wb").write(bytearray(res.read()))
         res.close()
+        print("Extracting movie ...")
         CPK(filename.split("/")[-1]).extract()
         USM(os.path.join(filename.split("/")[-1].replace(".cpk", ""), [usme for usme in os.listdir(filename.split("/")[-1].replace(".cpk", "")) if usme.endswith(".usme")][0]), key=0x0000047561F95FCF).extract(dirname=filename.split("/")[-1].replace(".cpk", ""))
         print(f'{filename.split("/")[-1].replace(".cpk", "")} demuxed!')
         if asset_type == "live_movie":
+          print("Downloading additional live song ...")
           live_song = [song for song in json.load(open(catalog, "r", encoding="utf-8"))["assets_masters"] if re.sub(r"_\d{3}.cpk$", "", filename).replace("video/live_movie/live_movie_", "sound/song/live_music_") in song["code"]][0]
-          with httpx.stream("GET", "/".join(urlserver) + f'/{live_song["code"]}?{live_song["signature"]}') as res:
+          with httpx.stream("GET", "/".join(urlserver) + f'/{live_song["code"]}{"?"+live_song["signature"] if live_song["signature"] else ""}', timeout=None) as res:
             if res.status_code != 200:
               print("\x1b[38;5;1mWhoops, server error\x1b[0m")
               exit(1)
             open(live_song["code"].split("/")[-1], "wb").write(bytearray(res.read()))
           res.close()
+          print("Extracting live song ...")
           CPK(live_song["code"].split("/")[-1]).extract()
           ACB(os.path.join(live_song["code"].split("/")[-1].replace(".cpk", ""), [acb for acb in os.listdir(live_song["code"].split("/")[-1].replace(".cpk", "")) if acb.endswith(".acb")][0])).extract(dirname=filename.split("/")[-1].replace(".cpk", ""), decode=True, key=0x0000047561F95FCF)
           shutil.rmtree(live_song["code"].split("/")[-1].replace(".cpk", ""))
           os.remove(live_song["code"].split("/")[-1])
         if not os.path.exists(save_folder):
           os.makedirs(save_folder)
+        print("Merging live movie and live song ...")
         if re.search(r"(appeal_movie|fav_rank|exf_member_movie|live_movie|gacha_effect|smart_movie|making_movie)", filename.split("/")[-1]):
-          subprocess.run(["ffmpeg", "-i", os.path.join(filename.split("/")[-1].replace(".cpk", ""), [ivf for ivf in os.listdir(filename.split("/")[-1].replace(".cpk", "")) if ivf.endswith(".ivf")][0]), "-i", os.path.join(filename.split("/")[-1].replace(".cpk", ""), [audio for audio in os.listdir(filename.split("/")[-1].replace(".cpk", "")) if re.search("(.sfa|.wav)$", audio) ][0] ), "-c:v", "libx264", "-ab", "320k", "-c:a:0", "libmp3lame", os.path.join(save_folder, filename.split("/")[-1].replace(".cpk", ".mp4"))], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-          print(f'{filename.split("/")[-1].replace(".cpk", "")} converted!')
+          subprocess.run(["ffmpeg", "-i", os.path.join(filename.split("/")[-1].replace(".cpk", ""), [ivf for ivf in os.listdir(filename.split("/")[-1].replace(".cpk", "")) if ivf.endswith(".ivf")][0]), "-i", os.path.join(filename.split("/")[-1].replace(".cpk", ""), [audio for audio in os.listdir(filename.split("/")[-1].replace(".cpk", "")) if re.search("(.sfa|.wav)$", audio) ][0] ), "-c:v", "copy", "-ab", "320k", "-c:a:0", "libmp3lame", os.path.join(save_folder, filename.split("/")[-1].replace(".cpk", ".mp4"))], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         if re.search(r"(movie_photo|gacha_movie|profile|sign_movie)", filename.split("/")[-1]):
-          subprocess.run(["ffmpeg", "-i", os.path.join(filename.split("/")[-1].replace(".cpk", ""), [ivf for ivf in os.listdir(filename.split("/")[-1].replace(".cpk", "")) if ivf.endswith(".ivf")][0]), "-c:v", "libx264", os.path.join(save_folder, filename.split("/")[-1].replace(".cpk", ".mp4"))], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-          print(f'{filename.split("/")[-1].replace(".cpk", "")} converted!')
+          subprocess.run(["ffmpeg", "-i", os.path.join(filename.split("/")[-1].replace(".cpk", ""), [ivf for ivf in os.listdir(filename.split("/")[-1].replace(".cpk", "")) if ivf.endswith(".ivf")][0]), "-c:v", "copy", os.path.join(save_folder, filename.split("/")[-1].replace(".cpk", ".mp4"))], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         shutil.rmtree(filename.split("/")[-1].replace(".cpk", ""))
         os.remove(filename.split("/")[-1])
         print(f'＼ {filename.split("/")[-1].replace(".cpk", "")} Downloaded! ／')
@@ -214,25 +218,25 @@ def downloader_mode_7(
         print(f'\x1b[38;5;11m{filename.split("/")[-1].replace(".cpk", "")} already exist\x1b[0m')
 
     if re.search(r"^.*\.unity3d$", filename):
-      with httpx.stream("GET", "/".join(urlserver) + f"/{filename}?{signature}", timeout=None) as res:
-        if res.status_code != 200:
-          print("\x1b[38;5;1mWhoops, server error\x1b[0m")
-          exit(1)
-        assets = UnityPy.load(bytes(res.read()))
-        if assets.objects:
-          if not os.path.exists(save_folder):
-            os.makedirs(save_folder)
-          for asset in assets.objects:
-            if asset.type.name == "Texture2D" and not re.search(r"(_s|_m|_icon)" if asset_type == "scene_card" else r"(_m|_icon)", asset.read().name):
-              if not os.path.exists(os.path.join(path_local, save_folder, f"{asset.read().name}.png")):
-                asset.read().image.save(os.path.join(path_local, save_folder, f"{asset.read().name}.png"))
+      if not os.path.exists(os.path.join(save_folder, filename.split("/")[-1].replace(".unity3d", ".png"))):
+        with httpx.stream("GET", "/".join(urlserver) + f"/{filename}{'?'+signature if signature else ''}", timeout=None) as res:
+          if res.status_code != 200:
+            print("\x1b[38;5;1mWhoops, server error\x1b[0m")
+            exit(1)
+          assets = UnityPy.load(bytes(res.read()))
+          if assets.objects:
+            if not os.path.exists(save_folder):
+              os.makedirs(save_folder)
+            for asset in assets.objects:
+              if asset.type.name == "Texture2D" and asset.read().name == filename.split("/")[-1].replace(".unity3d", ""):
+                asset.read().image.save(os.path.join(save_folder, f"{asset.read().name}.png"))
                 print(f"{asset.read().name} saved!")
-              else:
-                print(f'\x1b[38;5;11m{asset.read().name} already exist\x1b[0m')
-      res.close()
+        res.close()
+      else:
+        print(f'\x1b[38;5;11m{filename.split("/")[-1].replace(".unity3d", "")} already exist\x1b[0m')
     if re.search(r"^.*\.mp4$", filename):
       if not os.path.exists(os.path.join(save_folder, filename.split("/")[-1])):
-        with httpx.stream("GET", "/".join(urlserver) + f"/{filename}?{signature}", timeout=None) as res:
+        with httpx.stream("GET", "/".join(urlserver) + f"/{filename}{'?'+signature if signature else ''}", timeout=None) as res:
           if res.status_code != 200:
             print("\x1b[38;5;1mWhoops, server error\x1b[0m")
             exit(1)
@@ -294,7 +298,7 @@ def downloader_mode_7(
     print(f"Length           : {str(len(filtered_data))}")
     print(f"Requested length : {str(len(datas))} ({str(from_index)} to {str(to_index)})")
     for url in datas:
-      executor(url["code"], url["signature"])
+      executor(filename=url["code"], signature=(url["signature"] if url["signature"] else None))
   else:
     print("\x1b[38;5;1mWhoops, seems that you placed the wrong asset type\x1b[0m")
   

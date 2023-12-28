@@ -313,6 +313,12 @@ node cli.js -v
 - [ ] Create blogs downloader.
 
 ## 🪵 Changelog
+- 2023-12-22_2.4.0
+```
+• Minor bug fix.
+• Fix Unison assets download logic.
+```
+
 - 2023-12-22_2.3.0
 ```
 • Minor bug fix.
@@ -328,8 +334,8 @@ node cli.js -v
 
 - 2023-10-05_1.5.2
 ```
-• Minor bug fix
-• You can now download Sakukoi or Hinakoi assets manually from local or catalog
+• Minor bug fix.
+• You can now download Sakukoi or Hinakoi assets manually from local or catalog.
 ```
 - 2023-09-20_1.4.2
 ```
@@ -352,14 +358,14 @@ node cli.js -v
 ```
 - 2023-09-07_1.0.1
 ```
-• Minor bug fix
+• Minor bug fix.
 ```
 - 2023-09-06_1.0.0
 ```
-• Now working on Windows
-• Separate python extraction script
-• Remove ffpb
-• Generate new requirements.txt
+• Now working on Windows.
+• Separate python extraction script.
+• Remove ffpb.
+• Generate new requirements.txt.
 ```
 
 ## 🐞 Known Bugs

@@ -313,6 +313,11 @@ node cli.js -v
 - [ ] Create blogs downloader.
 
 ## 🪵 Changelog
+- 2024-01-10_2.4.1
+```
+• Minor bug fix.
+```
+
 - 2023-12-22_2.4.0
 ```
 • Minor bug fix.
